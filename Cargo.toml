@@ -1,9 +1,13 @@
 [package]
 name = "word2vecfun"
 version = "0.1.0"
-authors = ["Michal Jamry <michal.jamry@yougov.com>"]
+authors = ["Michal Jamry <jamrymi@gmail.com>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+ndarray = { version = "0.13.1", features = ["blas"] }
+blas-src = { version = "0.2.0", default-features = false, features = ["openblas"] }
+openblas-src = { version = "0.6.0", default-features = false, features = ["cblas", "system"] }
+ndarray-linalg = "0.12.1"
+ndarray-stats = "0.3.0"
+ndarray-rand = "0.11.0"
